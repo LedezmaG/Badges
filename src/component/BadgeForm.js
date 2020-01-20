@@ -2,10 +2,10 @@ import React from 'react';
 
 class BadgeForm extends React.Component{
 
+    state = {};
     handleChange = (e) => {
-        console.log({ 
-            name: e.target.name,
-            value: e.target.value 
+        this.setState({
+            [e.target.name]: e.target.value,
         });
     }
 
@@ -16,6 +16,7 @@ class BadgeForm extends React.Component{
     handleSubmit = (e) => {
         e.preventDefault();
         console.log("form was sutmited");
+        console.log(this.state);
         
     }
 
@@ -27,10 +28,26 @@ class BadgeForm extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-geoup">
                         <label htmlFor="">First Name</label>
-                        <input onChange={this.handleChange} type="text" name="firstName" className="form-control"/>
+                        <input onChange={this.handleChange} value={this.state.firstName} type="text" name="firstName" className="form-control"/>
+                    </div>
+                    <div className="form-geoup">
+                        <label htmlFor="">Last Name</label>
+                        <input onChange={this.handleChange} value={this.state.lastName} type="text" name="lastName" className="form-control"/>
+                    </div>
+                    <div className="form-geoup">
+                        <label htmlFor="">Email</label>
+                        <input onChange={this.handleChange} value={this.state.email} type="email" name="email" className="form-control"/>
+                    </div>
+                    <div className="form-geoup">
+                        <label htmlFor="">Job Title</label>
+                        <input onChange={this.handleChange} value={this.state.jobTitle} type="text" name="jobTitle" className="form-control"/>
+                    </div>
+                    <div className="form-geoup">
+                        <label htmlFor="">Username</label>
+                        <input onChange={this.handleChange} value={this.state.Username} type="text" name="Username" className="form-control"/>
                     </div>
 
-                    <button onClick={this.handleClick} className="btn btn-primary">Save</button>
+                    <button onClick={this.handleClick} className="btn btn-primary mt-2 mb-3">Save</button>
                 </form>
             </div>  
         );
