@@ -9,6 +9,26 @@ import BadgeForm from '../component/BadgeForm.js';
 
 class BadgeNew extends React.Component{
 
+    state = { 
+        from: {
+            firstName:"", 
+            lastName:"",
+            jobTitle:"", 
+            userName:"",
+        }
+    };
+
+    handleChange = e => {
+        // const nextForm = this.state.form;
+        // nextForm[e.target.name] = e.target.value;
+
+        this.setState({
+            form:{
+                ... this.state.form,
+                [e.target.name]: e.target.value,
+            },
+        });
+    };
 
     render(){
         return(
@@ -22,15 +42,19 @@ class BadgeNew extends React.Component{
                     <div className="row">
                         <div className="col-6">
                             <Badge 
-                                firstName="Israel" 
-                                lastName="Ledezma" 
-                                jobTitle="Web Developer" 
-                                userName="LedezmaG" 
+                                firstName={this.state.from.firstName}
+                                lastName={this.state.from.lastName}
+                                jobTitle={this.state.from.jobTitle}
+                                userName={this.state.from.username}
+                                email={this.state.from.email}            
                                 avatarURL="https://www.gravatar.com/avatar/HASH"
                             />
                         </div>
                         <div className="col-6">
-                            <BadgeForm />
+                            <BadgeForm 
+                                onChange={this.handleChange}
+                                formValues={this.state.form}
+                            />
                         </div>
                     </div>
                 </div>

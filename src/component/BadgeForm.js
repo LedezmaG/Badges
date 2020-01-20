@@ -26,25 +26,25 @@ class BadgeForm extends React.Component{
             <div>
                 <h1> New Attendant </h1>
                 <form onSubmit={this.handleSubmit}>
-                    <div className="form-geoup">
+                    <div className="form-group">
                         <label htmlFor="">First Name</label>
-                        <input onChange={this.handleChange} value={this.state.firstName} type="text" name="firstName" className="form-control"/>
+                        <input onChange={this.props.onChange} value={this.props.formValues.firstName} type="text" name="firstName" className="form-control"/>
                     </div>
-                    <div className="form-geoup">
+                    <div className="form-group">
                         <label htmlFor="">Last Name</label>
-                        <input onChange={this.handleChange} value={this.state.lastName} type="text" name="lastName" className="form-control"/>
+                        <input onChange={this.props.onChange} value={this.props.formValues.lastName} type="text" name="lastName" className="form-control"/>
                     </div>
-                    <div className="form-geoup">
+                    <div className="form-group">
                         <label htmlFor="">Email</label>
-                        <input onChange={this.handleChange} value={this.state.email} type="email" name="email" className="form-control"/>
+                        <input onChange={this.props.onChange} value={this.props.formValues.email} type="email" name="email" className="form-control"/>
                     </div>
-                    <div className="form-geoup">
+                    <div className="form-group">
                         <label htmlFor="">Job Title</label>
-                        <input onChange={this.handleChange} value={this.state.jobTitle} type="text" name="jobTitle" className="form-control"/>
+                        <input onChange={this.props.onChange} value={this.props.formValues.jobTitle} type="text" name="jobTitle" className="form-control"/>
                     </div>
-                    <div className="form-geoup">
+                    <div className="form-group">
                         <label htmlFor="">Username</label>
-                        <input onChange={this.handleChange} value={this.state.Username} type="text" name="Username" className="form-control"/>
+                        <input onChange={this.props.onChange} value={this.props.formValues.Username} type="text" name="Username" className="form-control"/>
                     </div>
 
                     <button onClick={this.handleClick} className="btn btn-primary mt-2 mb-3">Save</button>
