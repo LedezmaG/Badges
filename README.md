@@ -1,10 +1,6 @@
 # Badges
 Proyecto de react.js 
 
-# Instalar dependencias
-
+# Dependencias
 - npm install
-
-# Correr proyecto
-
 - npm run start
