@@ -7,12 +7,12 @@ class BadgeForm extends React.Component{
 
         }
     }
-    handleChange = (e) => {
+/*     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
         });
     }
-
+ */
     handleClick = (e) => {
         console.log("button was clicked");
     }

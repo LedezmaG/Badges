@@ -42,18 +42,18 @@ class BadgeNew extends React.Component{
                     <div className="row">
                         <div className="col-6">
                             <Badge 
-                                firstName={this.state.from.firstName}
-                                lastName={this.state.from.lastName}
-                                jobTitle={this.state.from.jobTitle}
-                                userName={this.state.from.username}
-                                email={this.state.from.email}            
+                                firstName={this.state.form.firstName}
+                                lastName={this.state.form.lastName}
+                                jobTitle={this.state.form.jobTitle}
+                                userName={this.state.form.username}
+                                email={this.state.form.email}            
                                 avatarURL="https://www.gravatar.com/avatar/HASH"
                             />
                         </div>
                         <div className="col-6">
                             <BadgeForm 
                                 onChange={this.handleChange}
-                                formValues={this.state.from}
+                                formValues={this.state.form}
                             />
                         </div>
                     </div>
