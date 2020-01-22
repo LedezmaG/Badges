@@ -1,8 +1,12 @@
 import React from 'react';
 
 class BadgeForm extends React.Component{
+    constructor(props, state) {
+        super(props);
+        this.state = {
 
-    state = {};
+        }
+    }
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
@@ -21,7 +25,7 @@ class BadgeForm extends React.Component{
     }
 
     render(){
-       
+       console.log(this.props.formValues);
         return(
             <div>
                 <h1> New Attendant </h1>
