@@ -10,7 +10,7 @@ import BadgeForm from '../component/BadgeForm.js';
 class BadgeNew extends React.Component{
 
     state = { 
-        from: {
+        form: {
             firstName:"", 
             lastName:"",
             jobTitle:"", 
