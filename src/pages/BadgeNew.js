@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './style.css';
+import './styles/BadgeNew.css';
 import Header from '../img/badge-header.svg';
 
 import Navbar from '../component/Navbar.js';
