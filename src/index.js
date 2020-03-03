@@ -7,3 +7,4 @@ import './global.css';
 const conteiner = document.getElementById('app');
 
 ReactDOM.render(<BadgeNew/>, conteiner);
+
