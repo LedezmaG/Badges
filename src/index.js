@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BadgeNew from './pages/BadgeNew.js';
+
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './global.css';
+
+
+import App from './component/App.js'
 
 const conteiner = document.getElementById('app');
 
