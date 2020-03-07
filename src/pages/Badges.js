@@ -6,7 +6,7 @@ import conLogo from '../img/badge-header.svg'
 import Navbar from '../component/Navbar.js'
 import BadgesList from '../component/BadgesList.js'
 import { Link } from 'react-router-dom';
-import api from '../api';
+import api from '../api'
 
 class Badges extends React.Component{
 
@@ -14,26 +14,32 @@ class Badges extends React.Component{
         loading: true,
         error: null,
         data: undefined,
-    };
+    }
 
-    componentDidMount(){
-        this.fetchData();
+    componentDidMount (){
+        this.fetchData()
     }
 
     fetchData = async () => {
-        this.setState( { loading: true, error: null } );
+        this.setState( {loading: true, error: null})
+
         try {
             const data = await api.badges.list();
-            this.setState( { loading: false, data: data } );
+            this.setState( { loading: false, data: data});
         } catch (error) {
-            this.setState( { loading: false, error: error } );
+            this.setState( { loading: false, error: error});
+            
         }
     }
 
     render(){
 
         if (this.state.loading === true) {
-            return 'Loading ...';
+            return 'Loading...';
+        }
+
+        if (this.state.error) {
+            return `Error: ${this.state.error.message}`;
         }
 
         return(
