@@ -3,7 +3,6 @@ import React from 'react';
 import './styles/BadgeNew.css';
 import Header from '../img/badge-header.svg';
 
-import Navbar from '../component/Navbar.js';
 import Badge from '../component/badge.js';
 import BadgeForm from '../component/BadgeForm.js';
 
@@ -32,8 +31,7 @@ class BadgeNew extends React.Component{
 
     render(){
         return(
-            <div>
-                <Navbar />
+            <React.Fragment>
                 <div className="BadgeNew__hero">
                     <img className="img-fluid" src={Header} alt="logo" />
                 </div>
@@ -47,7 +45,7 @@ class BadgeNew extends React.Component{
                                 jobTitle={this.state.form.jobTitle}
                                 userName={this.state.form.username}
                                 email={this.state.form.email}            
-                                avatarURL="https://www.gravatar.com/avatar/HASH"
+                                avatarURL="https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
                             />
                         </div>
                         <div className="col-6">
@@ -58,7 +56,7 @@ class BadgeNew extends React.Component{
                         </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }

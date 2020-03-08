@@ -1,0 +1,16 @@
+
+************  React  ******************    
+
+- elemneto y componente 
+- como react utiliza las claves 
+- componentes de conetnedores y de precentacion (solo muestran los ) 
+- React redux (ayua a manejar a nivel gloval los states ) (state global ) (encripta los datos)
+- porque se llaman state(contienen datos) (ciclo de vida del react )
+
+************  JS  ******************    
+
+- Funcion e flecha se utiliza cuansdo es una funcion anonima Orientaa a estilo e programacion funcional 
+- Diferencia entre let y var scop 
+- spread opertator 
+
+¡¡Jquery ya no es usado!! Cambialo por js
